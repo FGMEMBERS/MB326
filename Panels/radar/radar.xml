@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<PropertyList>
+
+ <path>reticule.ac</path>
+
+ <animation>
+	 <type>translate</type>
+	 <object-name>Reticule</object-name>
+	 <property>instrumentation/radar/ai/models/aircraft[1]/radar/y-shift</property>
+	 <axis>
+		 <x>0</x>
+		 <y>1</y>
+		 <z>0</z>
+	 </axis>
+	 <factor>0.1</factor>
+ </animation>
+
+ 
+ <animation>
+	 <type>translate</type>
+	 <object-name>Reticule</object-name>
+	 <property>instrumentation/radar/ai/models/aircraft[1]/radar/x-shift</property>
+	 <axis>
+		 <x>0</x>
+		 <y>0</y>
+		 <z>1</z>
+	 </axis>
+	 <factor>0.1</factor>
+ </animation>
+ 
+ 
+ 
+</PropertyList>
+
+

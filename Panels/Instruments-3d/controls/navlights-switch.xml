@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+	<path>navlight-sw.ac</path>
+
+	<animation>
+		<type>pick</type>
+		<object-name>navlight-sw.click</object-name>
+		<visible>false</visible>
+		<action>
+			<button>0</button>
+			<repeatable>false</repeatable>
+			<binding>
+				<command>property-toggle</command>
+				<property>sim/model/lights/redlight/enabled</property>
+			</binding>
+			<binding>
+				<command>property-toggle</command>
+				<property>sim/model/lights/greenlight/enabled</property>
+			</binding>
+		</action>
+	</animation>
+	
+</PropertyList>
+

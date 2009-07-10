@@ -1,0 +1,185 @@
+<?xml version="2.0"?>
+ 
+<PropertyList>
+
+ <fx>
+
+  <engine>
+   <name>engine</name>
+   <mode>looped</mode>
+   <path>Sounds/T38-engines.wav</path>
+   <condition>
+    <property>/engines/engine/run[0]</property>
+   </condition>
+   <volume>
+    <property>/controls/throttle[0]</property>
+    <factor>1</factor>
+    <min>0.5</min>
+    <max>1.0</max>
+   </volume>
+  </engine>
+
+
+  <engine_fan>
+	  <name>internal fan</name>
+	  <path>Sounds/whine.wav</path>
+	  <mode>looped</mode>
+	  <condition>
+		  <property>sim/current-view/internal</property>
+		  <property>engines/engine/running</property>
+	  </condition>
+	  <pitch>
+		  <property>engines/engine/n1</property>
+		  <ofset>10.0</ofset>
+		  <factor>0.003</factor>
+	  </pitch>
+	  <volume>
+		  <property>engines/engine/n1</property>
+		  <ofset>0.8</ofset>
+		  <factor>0.005</factor>
+	  </volume>
+  </engine_fan>
+  
+  
+  <engine_fan>
+	  <name>external fan</name>
+	  <path>Aircraft/MB326/Sounds/viper_fan.wav</path>
+	  <mode>looped</mode>
+	  <condition>
+		  <property>engines/engine/running</property>
+		  <not>
+			  <property>sim/current-view/internal</property>
+		  </not>
+	  </condition>
+	  <pitch>
+		  <property>engines/engine/n1</property>
+		  <ofset>0.8</ofset>
+		  <factor>.003</factor>
+	  </pitch>
+	  <volume>
+		  <property>engines/engine/n1</property>
+		  <ofset>0.8</ofset>
+		  <factor>0.005</factor>
+	  </volume>
+  </engine_fan>
+
+  <flap>
+	  <name>flaps</name>
+	  <mode>in-transit</mode>
+	  <path>Sounds/flaps.wav</path>
+	  <property>/surface-positions/flap-pos-norm</property>
+	  <volume>
+		  <factor>0.6</factor>
+	  </volume>
+	  <reference-dist>10.0</reference-dist>
+  </flap>
+  
+  
+  <gear-wind>
+   <name>gear-wind</name>
+   <mode>looped</mode>
+   <path>Sounds/rumble.wav</path>
+   <condition>
+     <greater-than>
+      <property>/gear/gear[1]/position-norm[0]</property>
+      <value>0.01</value>
+     </greater-than>
+   </condition>
+   <volume>
+    <property>/velocities/airspeed-kt</property>
+    <factor>0.004</factor>
+    <max>1.0</max>
+   </volume>
+  </gear-wind>
+
+  
+  <gear>
+	  <name>gear</name>
+	  <path>Sounds/gear.wav</path>
+	  <mode>in-transit</mode>
+	  <property>gear/gear[0]/position-norm</property>
+	  <volume>
+		  <factor>0.8</factor>
+	  </volume>
+  </gear>
+  
+  <gear>
+	  <name>gear lock nose</name>
+	  <path>Sounds/gear-lck.wav</path>
+	  <condition>
+		  <equal>
+			  <property>gear/gear[0]/position-norm</property>
+			  <value>1</value>
+		  </equal>
+	  </condition>
+  </gear>
+  
+  <gear-lock>
+   <name>gear-lock</name>
+   <path>Sounds/gear-lck.wav</path>
+   <condition>
+    <equals>
+     <property>/gear/gear[0]/position-norm</property>
+     <value>0</value>
+    </equals>
+   </condition>
+  </gear-lock>
+
+  <squeal>
+   <name>squeal</name>
+   <path>Sounds/squeal.wav</path>
+   <condition>
+    <or>
+     <property>/gear/gear[0]/wow</property>
+     <property>/gear/gear[1]/wow</property>
+     <property>/gear/gear[2]/wow</property>
+    </or>
+   </condition>
+   <volume>
+    <property>/velocities/speed-down-fps</property>
+    <factor>0.05</factor>
+   </volume>
+   <volume>
+    <property>/velocities/airspeed-kt</property>
+    <factor>0.01</factor>
+   </volume>
+   <volume>
+    <internal>dt_stop</internal>
+    <factor>0.05</factor>
+    <max>1.0</max>
+   </volume>
+   <pitch>
+    <property>/velocities/airspeed-kt</property>
+    <factor>0.0025</factor>
+    <offset>1.2</offset>
+   </pitch>
+  </squeal>
+
+  <wind>
+   <name>wind</name>
+   <mode>looped</mode>
+   <path>Sounds/wind.wav</path>
+   <property>/velocities/airspeed-kt</property>
+   <volume>
+    <property>/position/altitude-ft</property>
+    <factor>-0.000015</factor>
+    <offset>1.0</offset>
+    <min>0.1</min>
+    <max>1.0</max>
+   </volume>
+   <volume>
+     <property>/velocities/airspeed-kt</property>
+     <factor>0.0015</factor>
+     <min>0.03</min>
+     <max>0.25</max>
+   </volume>
+   <pitch>
+    <property>/velocities/airspeed-kt</property>
+    <factor>0.01</factor>
+    <offset>1.25</offset>
+   </pitch>
+  </wind>
+
+</fx>
+ 
+</PropertyList>

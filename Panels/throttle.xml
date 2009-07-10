@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+	
+    <path>throttle.ac</path>
+    <animation>
+	<type>translate</type>
+	<object-name>Throttle</object-name>
+	<property>controls/engines/engine/throttle</property>
+	<factor>-0.20</factor>
+	<axis>
+	    <x>1</x>
+	    <y>0</y>
+	    <z>0</z>
+	</axis>
+    </animation>
+
+    
+</PropertyList>

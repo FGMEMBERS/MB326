@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+	
+	<path>panel-switches.ac</path>
+	
+	<model>
+		<name>Strobo light switch</name>
+		<path>Aircraft/MB326/Panels/Instruments-3d/controls/strobo_switch.xml</path>
+		<offsets>
+			<x-m> -0.119 </x-m>
+			<y-m>  0.270 </y-m>
+			<z-m>  0.054 </z-m>
+		</offsets>
+	</model>
+	
+	<model>
+		<name>Navigation lights switch</name>
+		<path>Aircraft/MB326/Panels/Instruments-3d/controls/navlights-switch.xml</path>
+		<offsets>
+			<x-m> -0.159 </x-m>
+			<y-m>  0.261 </y-m>
+			<z-m>  0.054 </z-m>
+		</offsets>
+		
+	</model>
+	
+	<model>
+		<name>Landing gear command</name>
+		<path>Aircraft/MB326/Panels/Instruments-3d/controls/gear-command.xml</path>
+		
+		<offsets>
+			<x-m> -0.159 </x-m>
+			<y-m>  0.0 </y-m>
+			<z-m>  0.1 </z-m>
+		</offsets>
+		
+	</model>
+	
+</PropertyList>

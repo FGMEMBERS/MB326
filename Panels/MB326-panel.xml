@@ -1,0 +1,133 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+  <path>panel.ac</path>
+  <offsets>
+	  <x-m> -3.384 </x-m>
+	  <y-m> -0.020 </y-m>
+	  <z-m>  2.333 </z-m>
+  </offsets>
+
+  <model>
+	  <name>Airspeed</name>
+	  <path>Aircraft/MB326/Panels/Instruments-3d/asi/asi.xml</path>
+	  <offsets>
+		  <x-m> -0.002 </x-m>
+		  <y-m> -0.080 </y-m>
+		  <z-m>  0.205 </z-m>
+	  </offsets>
+  </model>
+
+  <model>
+	<name>Altimeter</name>
+	<path>Aircraft/MB326/Panels/Instruments-3d/alt/alt.xml</path>
+    <offsets>
+		<x-m> -0.002 </x-m>
+		<y-m> -0.080 </y-m>
+		<z-m>  0.128 </z-m>
+    </offsets>
+  </model>
+  
+  <model>
+	  <name>Attitude indicator</name>
+	  <path>Aircraft/MB326/Panels/Instruments-3d/ai/ai.xml</path>
+	  <offsets>
+		  <x-m> -0.002 </x-m>
+		  <y-m>  0.103 </y-m>
+		  <z-m>  0.205 </z-m>
+	  </offsets>
+  </model>
+  
+  <model>
+	  <name>Exhaust gas temperature</name>
+	  <path>Aircraft/MB326/Panels/Instruments-3d/egt/egt.xml</path>
+	  <offsets>
+		  <x-m> -0.002 </x-m>
+		  <y-m>  0.189 </y-m>
+		  <z-m>  0.039 </z-m>
+	  </offsets>
+  </model>
+  
+  <model>
+	  <name>Heading indicator</name>
+	  <path>Aircraft/MB326/Panels/Instruments-3d/hdg/hdg.xml</path>
+	  <offsets>
+		  <x-m> -0.002 </x-m>
+		  <y-m>  0.012 </y-m>
+		  <z-m>  0.203 </z-m>
+	  </offsets>
+  </model>
+  
+  <model>
+	  <name>Vertical speed indicator</name>
+	  <path>Aircraft/MB326/Panels/Instruments-3d/vsi/vsi.xml</path>
+	  <offsets>
+		  <x-m> -0.002 </x-m>
+		  <y-m>  0.101 </y-m>
+		  <z-m>  0.124 </z-m>
+	  </offsets>
+  </model>
+  
+  <model>
+	  <name>ADF</name>
+	  <path>Aircraft/MB326/Panels/Instruments-3d/adf/adf.xml</path>
+	  <offsets>
+		  <x-m> -0.002 </x-m>
+		  <y-m>  0.013 </y-m>
+		  <z-m>  0.041 </z-m>
+	  </offsets>
+  </model>
+  
+  <model>
+	  <name>Manifold pressure</name>
+	  <path>Aircraft/MB326/Panels/Instruments-3d/mp/mp.xml</path>
+	  <offsets>
+		  <x-m> -0.002 </x-m>
+		  <y-m>  0.189 </y-m>
+		  <z-m> -0.020 </z-m>
+	  </offsets>
+  </model>
+  
+  <model>
+	  <name>RPM</name>
+	  <path>Aircraft/MB326/Panels/Instruments-3d/tach/tach.xml</path>
+	  <offsets>
+		  <x-m> -0.002 </x-m>
+		  <y-m>  0.188 </y-m>
+		  <z-m>  0.177 </z-m>
+	  </offsets>
+  </model>
+  
+  <model>
+	  <name>VHF</name>
+	  <path>Aircraft/MB326/Panels/Instruments-3d/VHF-22/ctl22-com1.xml</path>
+	  <offsets>
+		  <x-m>  0.002 </x-m>
+		  <y-m> -0.036 </y-m>
+		  <z-m> -0.043 </z-m>
+	  </offsets>
+  </model>
+  <!--
+  <model>
+	  <name>VHF</name>
+	  <path>Aircraft/MB326/Panels/Instruments-3d/VHF-22/ctl22-com2.xml</path>
+	  <offsets>
+		  <x-m>  0.002 </x-m>
+		  <y-m> -0.077 </y-m>
+		  <z-m>  0.019 </z-m>
+	  </offsets>
+  </model>
+  -->
+  <model>
+	  <name>Turn coordinator</name>
+	  <path>Aircraft/MB326/Panels/Instruments-3d/tc/tc.xml</path>
+	  <offsets>
+		  <x-m>  0.000 </x-m>
+		  <y-m>  0.012 </y-m>
+		  <z-m>  0.126 </z-m>
+	  </offsets>
+  </model>
+  
+  
+</PropertyList>

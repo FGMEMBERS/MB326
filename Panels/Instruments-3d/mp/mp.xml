@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+ <path>mp.ac</path>
+
+ <animation>
+  <type>material</type>
+  <object-name>Face.007</object-name>
+  <object-name>Needle.004</object-name>
+  <emission>
+   <red>1.0</red>
+   <green>0.2</green>
+   <blue>0.0</blue>
+   <factor-prop>/sim/model//material/instruments/factor</factor-prop>
+  </emission>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>Needle.004</object-name>
+  <property>/engines/engine[0]/oilp-norm</property>
+  <interpolation>
+   <entry><ind> 0.000 </ind><dep> -90.0 </dep></entry>     
+   <entry><ind> 0.285 </ind><dep> -64.3 </dep></entry>     
+   <entry><ind> 0.571 </ind><dep> -38.6 </dep></entry>     
+   <entry><ind> 0.857 </ind><dep> -12.8 </dep></entry>     
+   <entry><ind> 1.142 </ind><dep>  12.8 </dep></entry>     
+   <entry><ind> 1.428 </ind><dep>  38.6 </dep></entry>     
+   <entry><ind> 1.714 </ind><dep>  64.3 </dep></entry>     
+   <entry><ind> 2.000 </ind><dep>  90.0 </dep></entry>     
+  </interpolation>
+  <axis>
+   <x>-1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+ </animation>
+ 
+</PropertyList>
+
+

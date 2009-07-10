@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+	<path>greenlight.ac</path>
+	
+	<!-- Lumière rouge à l'extrémité de l'aile droite. -->
+	
+	<animation>
+		<type>noshadow</type>
+		<object-name>GreenLight</object-name>
+	</animation>
+	
+	<animation>
+		<type>select</type>
+		<object-name>GreenLight</object-name>
+		<condition>
+			<property>/sim/model/lights/greenlight/state</property>
+		</condition>
+	</animation>
+		
+	<animation>
+		<type>billboard</type>
+		<object-name>GreenLight</object-name>
+		<spherical type="bool">true</spherical>
+	</animation>
+	
+
+</PropertyList>
+
