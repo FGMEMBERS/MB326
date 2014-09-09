@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+	<model>
+		<name>ExternalLeftTank</name>
+		<path>Aircraft/MB326/Models/external_tanker.ac</path>
+		<offsets>
+			<y-m>2.941</y-m>
+			<x-m>0.0</x-m>
+			<z-m>1.316</z-m>
+		</offsets>
+	</model>	
+
+	<model>
+		<name>ExternalLeftTank</name>
+		<path>Aircraft/MB326/Models/external_tanker.ac</path>
+		<offsets>
+				<y-m>-2.941</y-m>
+				<x-m>0.0</x-m>
+				<z-m>1.316</z-m>
+			</offsets>
+		</model>	
+
+		
+		
+	<!-- Affichage des réservoirs d'aile gauche et droite. -->
+	<animation>
+		<type>select</type>
+		<object-name>ExternalLeftTank</object-name>
+		<condition>
+			<not>
+			<equal>
+				<property>weight[0]/selected</property>
+				<value>false</value>
+			</equal>
+			</not>
+		</condition>
+	</animation>
+	
+	<animation>
+		<type>select</type>
+		<object-name>ExternalLeftTank</object-name>
+		<condition>
+				<equal>
+					<property>weight[1]/selected</property>
+					<value>true</value>
+				</equal>
+		</condition>
+	</animation>
+	
+	
+	
+	
+</PropertyList>

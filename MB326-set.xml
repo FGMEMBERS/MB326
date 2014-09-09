@@ -1,0 +1,128 @@
+<?xml version="1.0"?>
+<!--
+************************************************************************
+MB326 config file
+Charles INGELS, charles@maisonblv.net
+http://charles.ingels.free.fr/flightgear
+************************************************************************
+-->
+
+<PropertyList>
+
+	<sim>
+	
+		<description>Aermacchi MB326G Armada</description>
+		<author>Charles INGELS</author>
+		<status>Release candidate</status>
+		
+		<flight-model>yasim</flight-model>
+		<aero>MB326-yasim</aero>
+		
+		<startup>
+			<splash-texture>Aircraft/MB326/MB326-splash.rgb</splash-texture>
+		</startup>
+		
+		<sound>
+			<path>Aircraft/MB326/Sounds/MB326-sound.xml</path>
+		</sound>
+		
+		<!-- 
+			Caméra en (-2.82; 0.0, 2.79)
+			Attention ! Les axes pour positionner la caméra ne sont pas les mêmes que
+			les axes de l'avion:
+			
+			Caméra
+			Y		==> bas/haut
+			Z		==> avant/arrière
+			X		==> gauche/droite
+			-->
+		<view n="0">
+			<internal archive="y">true</internal>
+			<config>
+				<x-offset-m archive="y">0.0</x-offset-m>
+				<y-offset-m archive="y">1.35</y-offset-m>
+				<z-offset-m archive="y">-2.82</z-offset-m>
+			</config>
+		</view>
+		
+		
+		<!-- Attention. Apparemment, il ne peut y avoir qu'une seule directive
+			 Model dans ce fichier. -->
+		<model>
+			<path>Aircraft/MB326/Models/MB326G.xml</path>
+		</model>
+		
+		<!--
+		<model>
+			<name>reticule</name>
+			<path>Aircraft/MB326/Panels/radar/radar.xml</path>
+		</model>
+		-->
+		
+		<chase-distance-m>-18</chase-distance-m>
+		
+		
+		<ai-traffic>
+			<enabled type="bool">true</enabled>
+		</ai-traffic>
+	
+	
+	</sim>
+
+	<consumables>
+		<fuel>
+			<tank n="0">
+				<level-gal_us archive="y">290</level-gal_us>
+			</tank>
+			<tank n="1">
+				<level-gal_us archive="y">290</level-gal_us>
+			</tank>
+		</fuel>
+	</consumables>
+	
+	
+	<engines>
+		<engine n="0">
+			<running>true</running>
+		</engine>
+	</engines>
+
+	<nasal>
+		<radar>
+			<file>Aircraft/MB326/Panels/radar/radar.nas</file>
+		</radar>
+		<mb326>
+			<file>Aircraft/MB326/Nasal/MB326.nas</file>
+		</mb326>
+		<systems>
+			<file>Aircraft/MB326/Panels/Instruments-3d/VHF-22/vhf22.nas</file>
+		</systems>
+	</nasal>
+
+	
+	<weight n="0">
+		<name>Right outboard</name>
+		<tank>1</tank>
+		<weight-lb>0</weight-lb>
+		<selected>none</selected>
+		<opt>
+			<name>Right external fuel tank</name>
+			<lbs>350</lbs>
+			<gals>320</gals>
+		</opt>
+	</weight>
+	
+	<weight n="1">
+		<name>Left outboard</name>
+		<tank>1</tank>
+		<weight-lb>0</weight-lb>
+		<selected>none</selected>
+		<opt>
+			<name>Left external fuel tank</name>
+			<lbs>350</lbs>
+			<gals>320</gals>
+		</opt>
+	</weight>
+	
+	
+</PropertyList>

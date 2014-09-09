@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+	<path>strobe_light.ac</path>
+	
+	<!-- Animation de la lumière stroboscopique sur le dessus de l'avion. -->
+	
+	<animation>
+		<type>noshadow</type>
+		<object-name>StrobeLight</object-name>
+	</animation>
+	
+	<animation>
+		<type>select</type>
+		<object-name>StrobeLight</object-name>
+		<condition>
+			<property>/sim/model/lights/strobe2/state</property>
+		</condition>
+	</animation>
+		
+	<animation>
+		<type>billboard</type>
+		<object-name>StrobeLight</object-name>
+		<spherical type="bool">true</spherical>
+	</animation>
+	
+
+</PropertyList>
+

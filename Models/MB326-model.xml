@@ -1,0 +1,649 @@
+<?xml version="1.0"?>
+<!-- 
+	A wrapper file for the MB326 3D model
+	Charles INGELS, <cbz-026@maisonblv.net>, 2009
+	Released under GPL 
+	See http://charles.ingels.free.fr/flightgear for more informations.
+-->
+
+<PropertyList>
+ <path>MB326.ac</path>
+
+ <!-- On positionne l'avion en lui affectant un offset. -->
+ <offsets>
+	 <z-m>-1.35</z-m>
+	 <x-m>0.0</x-m>
+	 <y-m>0.0</y-m>
+ </offsets>
+ 
+
+ <!-- Equipement externe à l'avion. -->
+ <!--
+ <model>
+	 <path>Aircraft/MB326/MB326-equipment.xml</path>
+ </model>
+ -->
+ 
+ <!-- Planche de bord avec les instruments. -->
+ <model>
+	 <path>Aircraft/MB326/Panels/MB326-panel.xml</path>
+ </model>
+ 
+ <!-- Consoles droite et gauche dans le cockpit. -->
+<model>
+	<path>Aircraft/MB326/Panels/MB326-panel-switches.xml</path>
+	<offsets>
+		<x-m> -3.201 </x-m>
+		<y-m>  0.000 </y-m>
+		<z-m>  2.223 </z-m>
+	</offsets>
+</model>
+
+<!-- Manette des gaz -->
+<model>
+	<path>Aircraft/MB326/Panels/throttle.xml</path>
+	<offsets>
+		<x-m> -3.201 </x-m>
+		<y-m>  0.000 </y-m>
+		<z-m>  2.223 </z-m>
+	</offsets>
+</model>
+
+ <!-- Si le train est sorti, on anime la roue avant par rapport 
+	  à la position de la dérive verticale. En résumé, on fait
+	  pivoter la roue de nez vers la droite ou la gauche selon
+	  un axe vertical. -->
+ <animation>
+  <condition>
+   <equals>
+    <property>gear/gear[0]/position-norm</property>
+    <value>1</value>
+   </equals>
+  </condition>
+  <type>rotate</type>
+  <object-name>NoseWheel</object-name>
+  <object-name>NoseWheelArm</object-name>
+  <property>surface-positions/rudder-pos-norm</property>
+  <factor>35</factor>
+  <center>
+	  <x-m>-3.859351</x-m>
+	  <y-m>0.020581</y-m>
+	  <z-m>1.52702</z-m>
+  </center>
+  <axis>
+	  <x>0.000988</x>
+	  <y>0.004022</y>
+	  <z>1.274282</z>
+  </axis>
+ </animation>
+ 
+ <!-- Animation de la dérive verticale. -->
+ <animation>
+  <type>rotate</type>
+  <object-name>VerticalWing</object-name>
+  <property>surface-positions/rudder-pos-norm</property>
+  <factor>-27</factor>
+  <center>
+	  <x-m>4.433205</x-m>
+	  <y-m>0.01781</y-m>
+	  <z-m>3.614548</z-m>
+  </center>
+  <axis>
+	  <x>0.286722</x>
+	  <y>0</y>
+	  <z>1.597769</z>
+  </axis>
+ </animation>
+
+ <!-- Animation trappe de train de nez avant gauche -->
+<animation>
+	<type>rotate</type>
+	<object-name>TrappeAVGauche</object-name>
+	<property>gear/gear[0]/position-norm</property>
+	<min-deg>-90</min-deg>
+	<max-deg>0</max-deg>
+	<factor>-320</factor>
+	<center>
+		<x-m>-4.299363</x-m>
+		<y-m>-0.142463</y-m>
+		<z-m>1.414819</z-m>
+	</center>
+	<axis>
+		<x>0.516597</x>
+		<y>-0.013429</y>
+		<z>-0.166659</z>
+	</axis>
+</animation>
+
+<!-- Animation trappe de train de nez avant droite -->
+<animation>
+	<type>rotate</type>
+	<object-name>TrappeAVDroite</object-name>
+	<property>gear/gear[0]/position-norm</property>
+	<min-deg>-90</min-deg>
+	<max-deg>0</max-deg>
+	<factor>-400</factor>
+	<center>
+		<x-m>-4.300086</x-m>
+		<y-m>0.179424</y-m>
+		<z-m>1.414819</z-m>
+	</center>
+	<axis>
+		<x>-0.516961</x>
+		<y>-0.012171</y>
+		<z>0.134042</z>
+	</axis>
+</animation>
+
+
+<!-- Animation de la roue avant lorsqu'elle rentre dans le puit 
+	 de train ou qu'elle en sort. -->
+<animation>
+	<type>rotate</type>
+	<object-name>NoseWheel</object-name>
+	<object-name>NoseWheelArm</object-name>
+	<property>gear/gear[0]/position-norm</property>
+	<min-deg>0</min-deg>
+	<max-deg>120</max-deg>
+	<factor>120</factor>
+	<center>
+		<x-m>-3.905149</x-m>
+		<y-m>0.020581</y-m>
+		<z-m>1.335858</z-m>
+	</center>
+	<axis>
+		<x>0</x>
+		<y>-0.278203</y>
+		<z>0</z>
+	</axis>
+</animation>
+
+
+<animation>
+	<type>rotate</type>
+	<object-name>LeftWheel</object-name>
+	<object-name>LeftWheelArm</object-name>
+	<object-name>LeftWheelMask01</object-name>
+	<property>gear/gear[1]/position-norm</property>
+	<min-deg>0</min-deg>
+	<max-deg>100</max-deg>
+	<factor>120</factor>
+	<center>
+		<x-m>-0.218463</x-m>
+		<y-m>-1.112761</y-m>
+		<z-m>1.46429</z-m>
+	</center>
+	<axis>
+		<x>0.050621</x>
+		<y>-0.000134</y>
+		<z>0.001137</z>
+	</axis>
+</animation>
+
+<animation>
+	<type>rotate</type>
+	<object-name>RightWheel</object-name>
+	<object-name>RightWheelArm</object-name>
+	<object-name>RightWheelMask01</object-name>
+	<property>gear/gear[2]/position-norm</property>
+	<min-deg>0</min-deg>
+	<max-deg>100</max-deg>
+	<factor>100</factor>
+	<center>
+		<x-m>-0.45137</x-m>
+		<y-m>1.144016</y-m>
+		<z-m>1.46112</z-m>
+	</center>
+	<axis>
+		<x>-0.050621</x>
+		<y>-0.000509</y>
+		<z>0.001026</z>
+	</axis>
+</animation>
+
+<animation>
+	<type>rotate</type>
+	<object-name>RightWheelMask02</object-name>
+	<property>gear/gear[2]/position-norm</property>
+	<interpolation>
+		<entry><ind>0</ind>0<dep></dep></entry>
+		<entry><ind>0.1</ind>0<dep>-90</dep></entry>
+		<entry><ind>0.8</ind><dep>-90</dep></entry>
+		<entry><ind>1</ind><dep>0</dep></entry>
+	</interpolation>
+	<center>
+		<x-m>-0.562816</x-m>
+		<y-m>2.238484</y-m>
+		<z-m>1.485144</z-m>
+	</center>
+	<axis>
+		<x>-0.770362</x>
+		<y>7.1e-05</y>
+		<z>-0.097342</z>
+	</axis>
+</animation>
+
+
+<animation>
+	<type>rotate</type>
+	<object-name>LeftWheelMask02</object-name>
+	<property>gear/gear[1]/position-norm</property>
+	<interpolation>
+		<entry><ind>0</ind>0<dep></dep></entry>
+		<entry><ind>0.1</ind>0<dep>-90</dep></entry>
+		<entry><ind>0.8</ind><dep>-90</dep></entry>
+		<entry><ind>1</ind><dep>0</dep></entry>
+	</interpolation>
+	<center>
+		<x-m>-0.206689</x-m>
+		<y-m>-2.245069</y-m>
+		<z-m>1.532321</z-m>
+	</center>
+	<axis>
+		<x>0.770362</x>
+		<y>7.2e-05</y>
+		<z>0.097342</z>
+	</axis>
+</animation>
+
+
+
+
+
+
+
+
+<animation>
+  <type>rotate</type>
+  <object-name>leftelevator</object-name>
+  <property>surface-positions/elevator-pos-norm</property>
+  <factor>30</factor>
+  <offset-deg>0</offset-deg>
+  <min>-90</min>
+  <max>0</max>
+  <center>
+	  <x-m>5.146086</x-m>
+	  <y-m>-1.121056</y-m>
+	  <z-m>2.06326</z-m>
+  </center>
+  <axis>
+	  <x>-0.001894</x>
+	  <y>1.53829</y>
+	  <z>0.024738</z>
+  </axis>
+</animation>
+ 
+<animation>
+  <type>rotate</type>
+  <object-name>rightelevator</object-name>
+  <property>surface-positions/elevator-pos-norm</property>
+  <factor>-30</factor>
+  <min>-90</min>
+  <max>0</max>
+  <offset-deg>0</offset-deg>   
+	  <center>
+		  <x-m>5.138351</x-m>
+		  <y-m>1.047576</y-m>
+		  <z-m>2.06293</z-m>
+	  </center>
+	  <axis>
+		  <x>-0.001894</x>
+		  <y>-1.53829</y>
+		  <z>0.024738</z>
+	  </axis>
+</animation>
+ 
+  <animation>
+  <type>rotate</type>
+  <object-name>leftaileron</object-name>
+  <property>surface-positions/left-aileron-pos-norm</property>
+  <factor>40</factor>
+  <offset-deg>0</offset-deg>   
+  <center>
+	  <x-m>0.838395</x-m>
+	  <y-m>-4.014317</y-m>
+	  <z-m>1.842423</z-m>
+  </center>
+  <axis>
+	  <x>-0.082961</x>
+	  <y>1.753021</y>
+	  <z>-0.080182</z>
+  </axis>
+ </animation>
+ 
+ <animation>
+  <type>rotate</type>
+  <object-name>rightaileron</object-name>
+  <property>surface-positions/right-aileron-pos-norm</property>
+  <factor>-40</factor>
+  <offset-deg>0</offset-deg>   
+  <center>
+	  <x-m>0.836685</x-m>
+	  <y-m>4.220644</y-m>
+	  <z-m>1.774649</z-m>
+  </center>
+  <axis>
+	  <x>-0.082961</x>
+	  <y>-1.753021</y>
+	  <z>-0.080182</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>rudder</object-name>
+  <property>surface-positions/rudder-pos-norm</property>
+  <factor>15</factor>
+  <offset-deg>0</offset-deg>   
+  <center>
+	  <x-m>5.151303</x-m>
+	  <y-m>-1.159737</y-m>
+	  <z-m>2.068837</z-m>
+  </center>
+  <axis>
+	  <x>-0.001894</x>
+	  <y>1.53829</y>
+	  <z>0.024738</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>leftflap</object-name>
+  <property>surface-positions/flap-pos-norm</property>
+  <factor>50</factor>
+  <offset-deg>0</offset-deg>   
+  <center>
+	  <x-m>0.83543</x-m>
+	  <y-m>-1.966635</y-m>
+	  <z-m>1.667457</z-m>
+  </center>
+  <axis>
+	  <x>-0.091077</x>
+	  <y>2.511624</y>
+	  <z>-0.120076</z>
+  </axis>
+ </animation>
+ 
+ <animation>
+  <type>rotate</type>
+  <object-name>rightflap</object-name>
+  <property>surface-positions/flap-pos-norm</property>
+  <factor>-50</factor>
+  <offset-deg>0</offset-deg>   
+  <center>
+	  <x-m>0.860478</x-m>
+	  <y-m>1.942194</y-m>
+	  <z-m>1.674718</z-m>
+  </center>
+  <axis>
+	  <x>-0.091077</x>
+	  <y>-2.511622</y>
+	  <z>-0.120076</z>
+  </axis>
+ </animation>
+
+ <animation>
+	 <type>spin</type>
+	 <object-name>LeftWheel</object-name>
+	 <condition>
+		<equals>
+			<property>gear/gear[2]/wow</property>
+			<value>1</value>
+		</equals>
+	 </condition>
+	 <property>/gear/gear[2]/rollspeed-ms</property>
+	 <factor>-12.0</factor>
+	 <center>
+		 <x-m>-0.103573</x-m>
+		 <y-m>-1.919824</y-m>
+		 <z-m>1.708151</z-m>
+	 </center>
+	 <axis>
+		 <x>0</x>
+		 <y>-0.017047</y>
+		 <z>-0.114717</z>
+	 </axis>
+
+</animation>
+ 
+<animation>
+	<type>spin</type>
+	<object-name>RightWheel</object-name>
+	<condition>
+		<equals>
+			<property>gear/gear[1]/wow</property>
+			<value>1</value>
+		</equals>
+	</condition>
+	<property>/gear/gear[1]/rollspeed-ms</property>
+	<factor>-12.0</factor>
+	<center>
+		<x-m>-0.107805</x-m>
+		<y-m>1.933584</y-m>
+		<z-m>1.521853</z-m>
+	</center>
+	
+	<axis>
+		<x>0.002519</x>
+		<y>-0.018357</y>
+		<z>0.100296</z>
+	</axis>
+</animation>
+
+ <animation>
+	 <type>spin</type>
+	 <object-name>NoseWheel</object-name>
+	 <condition>
+			<equals>
+				<property>gear/gear[0]/wow</property>
+				<value>1</value>
+			</equals>
+	 </condition>
+	 <property>/gear/gear[0]/rollspeed-ms</property>
+	 <factor>12.0</factor>
+	 <center>
+		 <x-m>-4.560319</x-m>
+		 <y-m>-0.007065</y-m>
+		 <z-m>1.67754</z-m>
+	 </center>
+	 <axis>
+		 <x>0</x>
+		 <y>-0.104483</y>
+		 <z>0</z>
+	 </axis>
+</animation>
+ 
+<!-- Animation de l'aérofrein. -->
+<animation>
+	<type>rotate</type>
+	<object-name>AirBrakePanel</object-name>
+	<property>surface-positions/speedbrake-pos-norm</property>
+	<min-deg>-75</min-deg>
+	<max-deg>0</max-deg>
+	<factor>-75</factor>
+	<center>
+		<x-m>-0.15507</x-m>
+		<y-m>0.007878</y-m>
+		<z-m>1.067388</z-m>
+	</center>
+	<axis>
+		<x>0.001789</x>
+		<y>-0.204038</y>
+		<z>-0.000134</z>
+	</axis>
+</animation>
+
+<!-- Animation de la rotation de la tuyère du moteur. -->
+<animation>
+	<type>spin</type>
+	<object-name>OutJet</object-name>
+	<property>engines/engine/epr</property>
+	<factor type="float">150.0</factor>
+	<center>
+		<x-m>4.989737</x-m>
+		<y-m>-0.023</y-m>
+		<z-m>1.885049</z-m>
+	</center>
+	<axis>
+		<x>-0.201844</x>
+		<y>2e-06</y>
+		<z>1.5e-05</z>
+	</axis>
+</animation>
+
+<!-- Si la vue est interne, le pilote n'est pas affiché.
+    Pour une vue externe, le pilote est affiché. -->
+<animation>
+	<type>select</type>
+	<object-name>L-helmet</object-name>
+	<object-name>L-oxy-tube</object-name>
+	<object-name>L-chest</object-name>
+	<object-name>L-visor</object-name>
+	<object-name>L-face-mask</object-name>
+	<object-name>LL-arm</object-name>
+	<object-name>LR-armA</object-name>
+	<object-name>LR-armB</object-name>
+	<object-name>L-harness</object-name>
+	<object-name>LL-leg</object-name>
+	<object-name>LR-leg</object-name>
+	<object-name>LL-glove</object-name>
+	<object-name>LR-glove</object-name>
+	<object-name>L-head</object-name>
+	<object-name>disk</object-name>
+	<object-name>disk.001</object-name>
+	<object-name>cylinder</object-name>
+	<object-name>cylinder.001</object-name>
+	<object-name>L-collar</object-name>
+	<object-name>patche</object-name>
+	<object-name>L-mask-tube</object-name>
+	<condition>
+		<not>
+			<equals>
+				<property>sim/current-view/internal</property>
+				<value>true</value>
+			</equals>
+		</not>
+	</condition>
+</animation>
+
+<!-- Animation du manche à balai latéralement. -->
+<animation>
+	<type>rotate</type>
+	<object-name>stick</object-name>
+	<object-name>stick-handle</object-name>
+	<property>/controls/flight/aileron</property>
+	<factor>11</factor>
+	<center>
+		<x-m>-3.313646</x-m>
+		<y-m>0.000403</y-m>
+		<z-m>1.812909</z-m>
+	</center>
+	<axis>
+		<x>-0.040334</x>
+		<y>0.001586</y>
+		<z>0</z>
+	</axis>
+</animation>
+
+<!-- Animation du manche à balai d'avant en arrière. -->
+<animation>
+	<type>rotate</type>
+	<object-name>stick</object-name>
+	<object-name>stick-handle</object-name>
+	<property>/controls/flight/elevator</property>
+	<factor>-11</factor>
+	<center>
+		<x-m>-3.273228</x-m>
+		<y-m>0.000403</y-m>
+		<z-m>1.812909</z-m>
+	</center>
+	<axis>
+		<x>-0.001509</x>
+		<y>0.042387</y>
+		<z>0</z>
+	</axis>
+</animation>
+
+<!-- Ajout de la lampe stroboscopique supérieure. -->
+<model>
+	<path>Aircraft/MB326/Models/MB326-strobelight1.xml</path>
+	<offsets>
+		<x-m>  0.792 </x-m>
+		<y-m>  0.000 </y-m>
+		<z-m>  2.800 </z-m>
+	</offsets>
+</model>
+
+<!-- Ajout de la lampe stroboscopique inférieure. -->
+<model>
+	<path>Aircraft/MB326/Models/MB326-strobelight2.xml</path>
+	<offsets>
+		<x-m> -0.788 </x-m>
+		<y-m>  0.000 </y-m>
+		<z-m>  1.017 </z-m>
+	</offsets>
+</model>
+
+<!-- Ajout du feu de navigation vert droit. -->
+<model>
+	<path>Aircraft/MB326/Models/MB326-greenlight.xml</path>
+	<offsets>
+		<x-m>  0.041 </x-m>
+		<y-m>  5.480 </y-m>
+		<z-m>  1.881 </z-m>
+	</offsets>
+</model>
+
+<!-- Ajout du feu de navigation rouge gauche. -->
+<model>
+	<path>Aircraft/MB326/Models/MB326-redlight.xml</path>
+	<offsets>
+		<x-m>  0.041 </x-m>
+		<y-m>  -5.537 </y-m>
+		<z-m>  1.879 </z-m>
+	</offsets>
+</model>
+
+<!-- Animation du switch contrôlant les feux de navigation. -->
+<animation>
+	<type>rotate</type>
+	<object-name>navlight-sw.lever</object-name>
+	<property>controls/switches/nav_lights_enable</property>
+	<min-deg>-30</min-deg>
+	<max-deg>30</max-deg>
+	<factor>60</factor>
+	<center>
+		<x-m>-1.4e-05</x-m>
+		<y-m>-1e-06</y-m>
+		<z-m>-1.5e-05</z-m>
+	</center>
+	<axis>
+		<x>0.008996</x>
+		<y>0</y>
+		<z>-0.0008</z>
+	</axis>
+</animation>
+
+<!-- Animation du switch contrôlant les feux stroboscopiques. -->
+<animation>
+	<type>rotate</type>
+	<object-name>strobo-switch.lever</object-name>
+	<property>controls/switches/strobe_lights_enable</property>
+	<min-deg>-30</min-deg>
+	<max-deg>30</max-deg>
+	<factor>60</factor>
+	<center>
+		<x-m>-1.4e-05</x-m>
+		<y-m>-1e-06</y-m>
+		<z-m>-1.5e-05</z-m>
+	</center>
+	<axis>
+		<x>0.008996</x>
+		<y>0</y>
+		<z>-0.0008</z>
+	</axis>
+</animation>
+
+</PropertyList>
+ 

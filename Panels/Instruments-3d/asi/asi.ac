@@ -1,0 +1,75 @@
+AC3Db
+MATERIAL "DefaultWhite" rgb 1 1 1  amb 1 1 1  emis 0 0 0  spec 0.5 0.5 0.5  shi 64  trans 0
+MATERIAL "DefaultWhite.009" rgb 1 1 1 amb 1 1 1 emis 0.15 0.15 0.15 spec 0.5 0.5 0.5 shi 64 trans 0
+OBJECT world
+kids 2
+OBJECT poly
+name "Face.003"
+data 8
+Mesh.074
+texture "asi.rgb"
+texrep 1 1
+crease 45.000000
+numvert 4
+0 0.04 -0.04
+0 -0.04 -0.04
+0 -0.04 0.04
+0 0.04 0.04
+numsurf 1
+SURF 0x00
+mat 1
+refs 4
+0 0.941406011581 0.941406011581
+3 0.0507812015712 0.941406011581
+2 0.0507812015712 0.0507812015712
+1 0.941406011581 0.0507812015712
+kids 0
+OBJECT poly
+name "Needle"
+data 8
+Mesh.073
+crease 45.000000
+numvert 9
+4e-06 0.002384 -0.001539
+4e-06 -0.018037 -0.001539
+4e-06 -0.018037 0.001535
+4e-06 0.002384 0.001535
+4e-06 0.005831 0.000724
+4e-06 0.005831 -0.000728
+4e-06 0.015112 -0.000728
+4e-06 0.015112 0.000724
+4e-06 0.018029 -2e-06
+numsurf 5
+SURF 0x00
+mat 1
+refs 4
+0 0.0 0.0
+3 0.0 0.0
+2 0.0 0.0
+1 0.0 0.0
+SURF 0x00
+mat 1
+refs 4
+3 0.0 0.0
+0 0.0 0.0
+5 0.0 0.0
+4 0.0 0.0
+SURF 0x00
+mat 1
+refs 3
+5 0.0 0.0
+6 0.0 0.0
+8 0.0 0.0
+SURF 0x00
+mat 1
+refs 3
+8 0.0 0.0
+7 0.0 0.0
+4 0.0 0.0
+SURF 0x00
+mat 1
+refs 3
+8 0.0 0.0
+4 0.0 0.0
+5 0.0 0.0
+kids 0
