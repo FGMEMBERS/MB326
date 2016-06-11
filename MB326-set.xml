@@ -19,7 +19,7 @@ http://charles.ingels.free.fr/flightgear
 		<aero>MB326-yasim</aero>
 		
 		<startup>
-			<splash-texture>Aircraft/MB326/MB326-splash.rgb</splash-texture>
+			<splash-texture>Aircraft/MB326/MB326-splash.png</splash-texture>
 		</startup>
 		
 		<sound>
